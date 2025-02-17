@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SimuPro | Estadísticas de Rendimiento</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/estadisticas.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav-container">
+      <a href="/" class="logo">
+        <h1>SimuPro</h1>
+      </a>
+      <div class="nav-links">
+        <a href="../index.html">
+          <i class="fas fa-home"></i>
+          <span>Inicio</span>
+        </a>
+        <a href="../view/simulacros.html">
+          <i class="fas fa-book"></i>
+          <span>Simulacros</span>
+        </a>
+        <a href="../view/estadisticas.html" class="active">
+          <i class="fas fa-chart-line"></i>
+          <span>Estadísticas</span>
+        </a>
+        <a href="./perfil.html">
+          <i class="fas fa-user"></i>
+          <span>Perfil</span>
+        </a>
+      </div>
+      <div class="auth-buttons">
+        <button class="btn-login">
+          <i class="fas fa-sign-in-alt"></i>
+          <span>Ingresar</span>
+        </button>
+        <button class="btn-register">
+          <i class="fas fa-user-plus"></i>
+          <span>Registro</span>
+        </button>
+      </div>
+      <button class="menu-toggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main class="stats-page">
+    <section class="hero-mini">
+      <div class="hero-content">
+        <h1>
+          <i class="fas fa-chart-line"></i>
+          Estadísticas de Rendimiento
+        </h1>
+        <p class="hero-description">
+          Analiza tu progreso en los simulacros y mejora tu preparación para el examen de admisión
+        </p>
+      </div>
+    </section>
+
+    <div class="stats-container">
+      <!-- Panel de Filtros -->
+      <aside class="filters-panel">
+        <div class="date-range">
+          <h3>Periodo</h3>
+          <select id="periodFilter">
+            <option value="week">Última semana</option>
+            <option value="month" selected>Último mes</option>
+            <option value="year">Último año</option>
+            <option value="custom">Personalizado</option>
+          </select>
+        </div>
+
+        <div class="subject-filter">
+          <h3>Materias</h3>
+          <div class="filter-options">
+            <label class="filter-option">
+              <input type="checkbox" value="matematica" checked>
+              <span class="checkbox-custom"></span>
+              <i class="fas fa-square-root-alt"></i>
+              Matemática
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="ciencias" checked>
+              <span class="checkbox-custom"></span>
+              <i class="fas fa-flask"></i>
+              Ciencias
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="humanidades" checked>
+              <span class="checkbox-custom"></span>
+              <i class="fas fa-book"></i>
+              Humanidades
+            </label>
+          </div>
+        </div>
+
+        <div class="difficulty-filter">
+          <h3>Dificultad</h3>
+          <div class="filter-options">
+            <label class="filter-option">
+              <input type="checkbox" value="basico" checked>
+              <span class="checkbox-custom"></span>
+              <i class="fas fa-star"></i>
+              Básico
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="intermedio" checked>
+              <span class="checkbox-custom"></span>
+              <i class="fas fa-star"></i>
+              Intermedio
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="avanzado" checked>
+              <span class="checkbox-custom"></span>
+              <i class="fas fa-star"></i>
+              Avanzado
+            </label>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Contenido Principal -->
+      <div class="stats-content">
+        <!-- Resumen General -->
+        <section class="general-stats">
+          <h2>Resumen General</h2>
+          <div class="stats-cards">
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fas fa-trophy"></i>
+              </div>
+              <div class="stat-info">
+                <h3>Puntaje Promedio</h3>
+                <div class="stat-value">78/100</div>
+                <div class="stat-trend positive">
+                  <i class="fas fa-arrow-up"></i>
+                  +5% vs mes anterior
+                </div>
+              </div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <div class="stat-info">
+                <h3>Tasa de Aciertos</h3>
+                <div class="stat-value">82%</div>
+                <div class="stat-trend positive">
+                  <i class="fas fa-arrow-up"></i>
+                  +3% vs mes anterior
+                </div>
+              </div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="stat-info">
+                <h3>Tiempo Promedio</h3>
+                <div class="stat-value">85 min</div>
+                <div class="stat-trend negative">
+                  <i class="fas fa-arrow-down"></i>
+                  -2 min vs mes anterior
+                </div>
+              </div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fas fa-tasks"></i>
+              </div>
+              <div class="stat-info">
+                <h3>Simulacros Rendidos</h3>
+                <div class="stat-value">12</div>
+                <div class="stat-trend positive">
+                  <i class="fas fa-arrow-up"></i>
+                  +4 vs mes anterior
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Gráficos de Rendimiento -->
+        <section class="performance-charts">
+          <div class="chart-container">
+            <h2>Rendimiento por Área</h2>
+            <canvas id="subjectPerformanceChart"></canvas>
+          </div>
+          
+          <div class="chart-container">
+            <h2>Progreso en el Tiempo</h2>
+            <canvas id="progressChart"></canvas>
+          </div>
+        </section>
+
+        <!-- Historial de Simulacros -->
+        <section class="exam-history">
+          <h2>Historial de Simulacros</h2>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Fecha</th>
+                  <th>Simulacro</th>
+                  <th>Puntaje</th>
+                  <th>Tiempo</th>
+                  <th>Estado</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>10/02/2025</td>
+                  <td>Simulacro UNI</td>
+                  <td>82/100</td>
+                  <td>90 min</td>
+                  <td><span class="status-badge success">Aprobado</span></td>
+                  <td>
+                    <button class="btn-details" onclick="showExamDetails(1)">
+                      <i class="fas fa-eye"></i>
+                      Ver Detalles
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>05/02/2025</td>
+                  <td>Simulacro UNMSM</td>
+                  <td>74/100</td>
+                  <td>85 min</td>
+                  <td><span class="status-badge warning">Regular</span></td>
+                  <td>
+                    <button class="btn-details" onclick="showExamDetails(2)">
+                      <i class="fas fa-eye"></i>
+                      Ver Detalles
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>01/02/2025</td>
+                  <td>Simulacro Cajamarca</td>
+                  <td>80/100</td>
+                  <td>88 min</td>
+                  <td><span class="status-badge success">Aprobado</span></td>
+                  <td>
+                    <button class="btn-details" onclick="showExamDetails(3)">
+                      <i class="fas fa-eye"></i>
+                      Ver Detalles
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Recomendaciones -->
+        <section class="recommendations">
+          <h2>Recomendaciones Personalizadas</h2>
+          <div class="recommendations-grid">
+            <div class="recommendation-card warning">
+              <div class="recommendation-header">
+                <i class="fas fa-exclamation-circle"></i>
+                <h3>Matemática</h3>
+              </div>
+              <p>Necesitas reforzar Álgebra y Geometría. Tu rendimiento en estos temas está por debajo del promedio.</p>
+              <button class="btn-action">
+                Ver recursos de estudio
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+
+            <div class="recommendation-card success">
+              <div class="recommendation-header">
+                <i class="fas fa-check-circle"></i>
+                <h3>Ciencias</h3>
+              </div>
+              <p>¡Excelente progreso en Química! Mantén el ritmo y revisa los temas de Dinámica en Física.</p>
+              <button class="btn-action">
+                Practicar Física
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+
+            <div class="recommendation-card info">
+              <div class="recommendation-header">
+                <i class="fas fa-info-circle"></i>
+                <h3>Humanidades</h3>
+              </div>
+              <p>Tu rendimiento es constante. Sugerimos practicar más ejercicios de comprensión lectora.</p>
+              <button class="btn-action">
+                Comenzar práctica
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>SimuPro</h3>
+        <p>La mejor plataforma de preparación para exámenes de admisión en Perú</p>
+        <div class="footer-social">
+          <a href="#" class="social-icon" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Enlaces Rápidos</h3>
+        <ul>
+          <li><a href="#inicio"><i class="fas fa-chevron-right"></i>Inicio</a></li>
+          <li><a href="#simulacros"><i class="fas fa-chevron-right"></i>Simulacros</a></li>
+          <li><a href="#planes"><i class="fas fa-chevron-right"></i>Planes</a></li>
+          <li><a href="#blog"><i class="fas fa-chevron-right"></i>Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contacto</h3>
+        <p><i class="fas fa-envelope"></i> info@simupro.pe</p>
+        <p><i class="fas fa-phone"></i> (01) 123-4567</p>
+        <p><i class="fas fa-map-marker-alt"></i> Lima, Perú</p>
+      </div>
+      <div class="footer-section">
+        <h3>Soporte</h3>
+        <ul>
+          <li><a href="#ayuda"><i class="fas fa-question-circle"></i>Centro de Ayuda</a></li>
+          <li><a href="#faq"><i class="fas fa-info-circle"></i>Preguntas Frecuentes</a></li>
+          <li><a href="#terminos"><i class="fas fa-file-alt"></i>Términos y Condiciones</a></li>
+          <li><a href="#privacidad"><i class="fas fa-shield-alt"></i>Política de Privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 SimuPro. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="/js/estadisticas.js"></script>
+</body>
+</html>

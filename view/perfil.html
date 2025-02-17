@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SimuPro | Mi Perfil</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/perfil.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav-container">
+      <a href="/" class="logo">
+        <h1>SimuPro</h1>
+      </a>
+      <div class="nav-links">
+        <a href="../index.html">
+          <i class="fas fa-home"></i>
+          <span>Inicio</span>
+        </a>
+        <a href="./simulacros.html">
+          <i class="fas fa-book"></i>
+          <span>Simulacros</span>
+        </a>
+        <a href="estadisticas.html">
+          <i class="fas fa-chart-line"></i>
+          <span>Estadísticas</span>
+        </a>
+        <a href="./perfil.html" class="active">
+          <i class="fas fa-user"></i>
+          <span>Perfil</span>
+        </a>
+      </div>
+      <div class="auth-buttons">
+        <button class="btn-login">
+          <i class="fas fa-sign-in-alt"></i>
+          <span>Ingresar</span>
+        </button>
+        <button class="btn-register">
+          <i class="fas fa-user-plus"></i>
+          <span>Registro</span>
+        </button>
+      </div>
+      <button class="menu-toggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main class="profile-page">
+    <section class="hero-mini">
+      <div class="hero-content">
+        <h1>
+          <i class="fas fa-user-circle"></i>
+          Mi Perfil
+        </h1>
+        <p class="hero-description">
+          Administra tu información, revisa tu progreso y personaliza tu experiencia
+        </p>
+      </div>
+    </section>
+
+    <div class="profile-container">
+      <!-- Panel de navegación lateral -->
+      <aside class="profile-nav">
+        <div class="profile-summary">
+          <div class="profile-avatar">
+            <img src="https://ui-avatars.com/api/?name=Juan+Perez&background=2563eb&color=fff" alt="Avatar de usuario">
+            <button class="change-avatar">
+              <i class="fas fa-camera"></i>
+            </button>
+          </div>
+          <h2 class="profile-name">Juan Pérez</h2>
+          <p class="profile-level">
+            <i class="fas fa-award"></i>
+            Nivel Intermedio
+          </p>
+        </div>
+        <nav class="profile-menu">
+          <a href="#info" class="active">
+            <i class="fas fa-user"></i>
+            Información Personal
+          </a>
+          <a href="#progress">
+            <i class="fas fa-chart-line"></i>
+            Progreso y Logros
+          </a>
+          <a href="#preferences">
+            <i class="fas fa-cog"></i>
+            Preferencias
+          </a>
+          <a href="#security">
+            <i class="fas fa-shield-alt"></i>
+            Seguridad
+          </a>
+        </nav>
+      </aside>
+
+      <!-- Contenido principal -->
+      <div class="profile-content">
+        <!-- Sección de Información Personal -->
+        <section id="info" class="profile-section">
+          <div class="section-header">
+            <h2>Información Personal</h2>
+            <button class="btn-edit">
+              <i class="fas fa-edit"></i>
+              Editar
+            </button>
+          </div>
+          
+          <div class="info-grid">
+            <div class="info-item">
+              <label>Nombre Completo</label>
+              <p>Juan Pérez</p>
+            </div>
+            <div class="info-item">
+              <label>Correo Electrónico</label>
+              <p>juan.perez@email.com</p>
+            </div>
+            <div class="info-item">
+              <label>Universidad de Interés</label>
+              <p>Universidad Nacional Mayor de San Marcos</p>
+            </div>
+            <div class="info-item">
+              <label>Objetivo</label>
+              <p>Ingresar a la Facultad de Medicina</p>
+            </div>
+            <div class="info-item">
+              <label>Nivel de Experiencia</label>
+              <p>Intermedio</p>
+            </div>
+            <div class="info-item">
+              <label>Fecha de Registro</label>
+              <p>15 de Enero, 2024</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Sección de Progreso y Logros -->
+        <section id="progress" class="profile-section">
+          <h2>Progreso y Logros</h2>
+          
+          <div class="achievements-grid">
+            <div class="achievement-card">
+              <div class="achievement-icon">
+                <i class="fas fa-trophy"></i>
+              </div>
+              <h3>Primer Simulacro</h3>
+              <p>Completaste tu primer simulacro</p>
+            </div>
+            <div class="achievement-card">
+              <div class="achievement-icon">
+                <i class="fas fa-star"></i>
+              </div>
+              <h3>Puntaje Perfecto</h3>
+              <p>Obtuviste 100% en un simulacro</p>
+            </div>
+            <div class="achievement-card locked">
+              <div class="achievement-icon">
+                <i class="fas fa-fire"></i>
+              </div>
+              <h3>Racha de 5 días</h3>
+              <p>Completa simulacros 5 días seguidos</p>
+            </div>
+          </div>
+
+          <div class="progress-charts">
+            <div class="chart-container">
+              <h3>Evolución de Puntaje</h3>
+              <canvas id="progressChart"></canvas>
+            </div>
+          </div>
+
+          <div class="recent-activity">
+            <h3>Actividad Reciente</h3>
+            <div class="activity-list">
+              <div class="activity-item">
+                <div class="activity-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="activity-details">
+                  <h4>Simulacro UNI completado</h4>
+                  <p>Puntaje: 85/100</p>
+                  <span class="activity-date">Hace 2 días</span>
+                </div>
+                <button class="btn-details">Ver Detalles</button>
+              </div>
+              <div class="activity-item">
+                <div class="activity-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="activity-details">
+                  <h4>Simulacro UNMSM completado</h4>
+                  <p>Puntaje: 78/100</p>
+                  <span class="activity-date">Hace 5 días</span>
+                </div>
+                <button class="btn-details">Ver Detalles</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Sección de Preferencias -->
+        <section id="preferences" class="profile-section">
+          <h2>Preferencias</h2>
+          
+          <div class="preferences-grid">
+            <div class="preference-card">
+              <h3>Notificaciones</h3>
+              <div class="preference-options">
+                <label class="switch">
+                  <input type="checkbox" checked>
+                  <span class="slider"></span>
+                </label>
+                <span>Recibir notificaciones</span>
+              </div>
+            </div>
+
+            <div class="preference-card">
+              <h3>Áreas de Interés</h3>
+              <div class="preference-options">
+                <label class="checkbox-custom">
+                  <input type="checkbox" checked>
+                  <span class="checkmark"></span>
+                  Matemática
+                </label>
+                <label class="checkbox-custom">
+                  <input type="checkbox" checked>
+                  <span class="checkmark"></span>
+                  Ciencias
+                </label>
+                <label class="checkbox-custom">
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                  Humanidades
+                </label>
+              </div>
+            </div>
+
+            <div class="preference-card">
+              <h3>Dificultad Preferida</h3>
+              <div class="preference-options">
+                <select class="difficulty-select">
+                  <option value="basic">Básico</option>
+                  <option value="intermediate" selected>Intermedio</option>
+                  <option value="advanced">Avanzado</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="preference-card">
+              <h3>Tema Visual</h3>
+              <div class="preference-options">
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider"></span>
+                </label>
+                <span>Modo Oscuro</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Sección de Seguridad -->
+        <section id="security" class="profile-section">
+          <h2>Seguridad</h2>
+          
+          <div class="security-options">
+            <div class="security-card">
+              <h3>Cambiar Contraseña</h3>
+              <p>Actualiza tu contraseña regularmente para mantener tu cuenta segura</p>
+              <button class="btn-security">
+                <i class="fas fa-key"></i>
+                Cambiar Contraseña
+              </button>
+            </div>
+
+            <div class="security-card">
+              <h3>Sesiones Activas</h3>
+              <p>Revisa y cierra sesión en otros dispositivos</p>
+              <button class="btn-security">
+                <i class="fas fa-desktop"></i>
+                Ver Sesiones
+              </button>
+            </div>
+
+            <div class="security-card danger-zone">
+              <h3>Zona de Peligro</h3>
+              <p>Estas acciones son permanentes y no se pueden deshacer</p>
+              <button class="btn-danger">
+                <i class="fas fa-trash-alt"></i>
+                Eliminar Cuenta
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>SimuPro</h3>
+        <p>La mejor plataforma de preparación para exámenes de admisión en Perú</p>
+        <div class="footer-social">
+          <a href="#" class="social-icon" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Enlaces Rápidos</h3>
+        <ul>
+          <li><a href="/"><i class="fas fa-chevron-right"></i>Inicio</a></li>
+          <li><a href="/simulacros.html"><i class="fas fa-chevron-right"></i>Simulacros</a></li>
+          <li><a href="#planes"><i class="fas fa-chevron-right"></i>Planes</a></li>
+          <li><a href="#blog"><i class="fas fa-chevron-right"></i>Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contacto</h3>
+        <p><i class="fas fa-envelope"></i> info@simupro.pe</p>
+        <p><i class="fas fa-phone"></i> (01) 123-4567</p>
+        <p><i class="fas fa-map-marker-alt"></i> Lima, Perú</p>
+      </div>
+      <div class="footer-section">
+        <h3>Soporte</h3>
+        <ul>
+          <li><a href="#ayuda"><i class="fas fa-question-circle"></i>Centro de Ayuda</a></li>
+          <li><a href="#faq"><i class="fas fa-info-circle"></i>Preguntas Frecuentes</a></li>
+          <li><a href="#terminos"><i class="fas fa-file-alt"></i>Términos y Condiciones</a></li>
+          <li><a href="#privacidad"><i class="fas fa-shield-alt"></i>Política de Privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 SimuPro. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="/js/perfil.js"></script>
+</body>
+</html>

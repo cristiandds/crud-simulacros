@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SimuPro - Simulacros de Examen</title>
+  <title>SimuPro | Simulacros de Admisión</title>
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/simulacros.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -15,19 +15,19 @@
         <h1>SimuPro</h1>
       </a>
       <div class="nav-links">
-        <a href="#inicio">
+        <a href="/">
           <i class="fas fa-home"></i>
           <span>Inicio</span>
         </a>
-        <a href="#simulacros" class="active">
+        <a href="/simulacros.html" class="active">
           <i class="fas fa-book"></i>
           <span>Simulacros</span>
         </a>
-        <a href="#estadisticas">
+        <a href="/estadisticas.html">
           <i class="fas fa-chart-line"></i>
           <span>Estadísticas</span>
         </a>
-        <a href="#perfil">
+        <a href="/perfil.html">
           <i class="fas fa-user"></i>
           <span>Perfil</span>
         </a>
@@ -54,40 +54,37 @@
     <section class="hero-mini">
       <div class="hero-content">
         <h1>
-          <i class="fas fa-pencil-alt"></i>
-          Simulacros
+          <i class="fas fa-book"></i>
+          Simulacros de Admisión
         </h1>
         <p class="hero-description">
-          Practica con exámenes reales, pon a prueba tus conocimientos y prepárate para tu futuro universitario.
+          Practica con exámenes reales, pon a prueba tus conocimientos y prepárate para tu futuro universitario
         </p>
       </div>
     </section>
 
-    <section class="simulacros-container">
+    <div class="simulacros-container">
+      <!-- Panel de Filtros -->
       <aside class="filters-panel">
-        <div class="search-box">
-          <input type="text" id="searchSimulacros" placeholder="Buscar simulacros...">
-          <i class="fas fa-search"></i>
+        <div class="search-bar">
+          <input type="text" id="searchSimulacros" class="search-input" placeholder="Buscar simulacros...">
         </div>
 
         <div class="filter-group">
-          <h3>Área de Estudio</h3>
+          <h3>Área</h3>
           <div class="filter-options">
             <label class="filter-option">
               <input type="checkbox" value="matematica">
-              <span class="checkbox-custom"></span>
               <i class="fas fa-square-root-alt"></i>
               Matemática
             </label>
             <label class="filter-option">
               <input type="checkbox" value="ciencias">
-              <span class="checkbox-custom"></span>
               <i class="fas fa-flask"></i>
               Ciencias
             </label>
             <label class="filter-option">
               <input type="checkbox" value="humanidades">
-              <span class="checkbox-custom"></span>
               <i class="fas fa-book"></i>
               Humanidades
             </label>
@@ -99,22 +96,16 @@
           <div class="filter-options">
             <label class="filter-option">
               <input type="radio" name="difficulty" value="basico">
-              <span class="radio-custom"></span>
               <i class="fas fa-star"></i>
               Básico
             </label>
             <label class="filter-option">
               <input type="radio" name="difficulty" value="intermedio">
-              <span class="radio-custom"></span>
-              <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
               Intermedio
             </label>
             <label class="filter-option">
               <input type="radio" name="difficulty" value="avanzado">
-              <span class="radio-custom"></span>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
               Avanzado
             </label>
@@ -125,34 +116,39 @@
           <h3>Universidad</h3>
           <div class="filter-options">
             <label class="filter-option">
-              <input type="checkbox" value="uni">
-              <span class="checkbox-custom"></span>
-              UNI
+              <input type="checkbox" value="unc">
+              <i class="fas fa-university"></i>
+              UNC
             </label>
             <label class="filter-option">
               <input type="checkbox" value="unmsm">
-              <span class="checkbox-custom"></span>
+              <i class="fas fa-university"></i>
               UNMSM
             </label>
             <label class="filter-option">
+              <input type="checkbox" value="uni">
+              <i class="fas fa-university"></i>
+              UNI
+            </label>
+            <label class="filter-option">
               <input type="checkbox" value="pucp">
-              <span class="checkbox-custom"></span>
+              <i class="fas fa-university"></i>
               PUCP
             </label>
           </div>
         </div>
       </aside>
 
+      <!-- Listado de Simulacros -->
       <div class="simulacros-grid">
-        <!-- Simulacros will be injected here via JavaScript -->
+        <!-- Los simulacros se cargarán dinámicamente aquí -->
       </div>
-    </section>
+    </div>
   </main>
 
+  <!-- Modal para detalles del examen -->
   <div id="examModal" class="modal">
-    <div class="modal-content">
-      <!-- Content will be injected via JavaScript -->
-    </div>
+    <!-- El contenido del modal se cargará dinámicamente -->
   </div>
 
   <footer class="footer">
@@ -178,8 +174,8 @@
       <div class="footer-section">
         <h3>Enlaces Rápidos</h3>
         <ul>
-          <li><a href="#inicio"><i class="fas fa-chevron-right"></i>Inicio</a></li>
-          <li><a href="#simulacros"><i class="fas fa-chevron-right"></i>Simulacros</a></li>
+          <li><a href="/"><i class="fas fa-chevron-right"></i>Inicio</a></li>
+          <li><a href="/simulacros.html"><i class="fas fa-chevron-right"></i>Simulacros</a></li>
           <li><a href="#planes"><i class="fas fa-chevron-right"></i>Planes</a></li>
           <li><a href="#blog"><i class="fas fa-chevron-right"></i>Blog</a></li>
         </ul>
