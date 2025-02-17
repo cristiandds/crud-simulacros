@@ -1,0 +1,306 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SimuPro - La plataforma líder de simulacros de examen de admisión en Perú. Prepárate para ingresar a las mejores universidades con simulacros personalizados y herramientas de aprendizaje adaptativo.">
+  <title>SimuPro - Simulacros de Examen de Admisión Personalizados</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav-container">
+      <a href="/" class="logo">
+        <h1>SimuPro</h1>
+      </a>
+      <div class="nav-links">
+        <a href="#inicio" class="active">
+          <i class="fas fa-home"></i>
+          <span>Inicio</span>
+        </a>
+        <a href="#simulacros">
+          <i class="fas fa-book"></i>
+          <span>Simulacros</span>
+        </a>
+        <a href="#estadisticas">
+          <i class="fas fa-chart-line"></i>
+          <span>Estadísticas</span>
+        </a>
+        <a href="#perfil">
+          <i class="fas fa-user"></i>
+          <span>Perfil</span>
+        </a>
+      </div>
+      <div class="auth-buttons">
+        <button class="btn-login">
+          <i class="fas fa-sign-in-alt"></i>
+          <span>Ingresar</span>
+        </button>
+        <button class="btn-register">
+          <i class="fas fa-user-plus"></i>
+          <span>Registro</span>
+        </button>
+      </div>
+      <button class="menu-toggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="main-title">
+            <span class="highlight">Impulsa Tu Futuro:</span> 
+            Simulacros Reales para Estudiantes y Docentes
+          </h1>
+          <h2 class="subtitle">
+            Miles de estudiantes y docentes confían en SimuPro para optimizar su aprendizaje y enseñanza con simulacros realistas
+          </h2>
+          
+          <div class="key-benefits">
+            <div class="benefit-item">
+              <i class="fas fa-graduation-cap"></i>
+              <span>Simulacros Personalizados</span>
+            </div>
+            <div class="benefit-item">
+              <i class="fas fa-chart-line"></i>
+              <span>Resultados Inmediatos</span>
+            </div>
+            <div class="benefit-item">
+              <i class="fas fa-users"></i>
+              <span>Soporte Docente</span>
+            </div>
+          </div>
+
+          <div class="cta-buttons">
+            <button class="student-cta">
+              <i class="fas fa-user-graduate"></i>
+              Comenzar como Estudiante
+            </button>
+            <button class="teacher-cta">
+              <i class="fas fa-chalkboard-teacher"></i>
+              Comenzar como Profesor
+            </button>
+          </div>
+        </div>
+        
+        <div class="hero-illustration">
+          <!-- Enhanced educational illustration -->
+          <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:0.3" />
+                <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0.6" />
+              </linearGradient>
+            </defs>
+            <circle cx="250" cy="250" r="200" fill="url(#grad1)" />
+            <path d="M150 300 Q250 200 350 300" stroke="#ffffff" stroke-width="4" fill="none">
+              <animate attributeName="d" 
+                       dur="4s" 
+                       values="M150 300 Q250 200 350 300;M150 280 Q250 220 350 280;M150 300 Q250 200 350 300" 
+                       repeatCount="indefinite" />
+            </path>
+            <circle cx="150" cy="300" r="20" fill="#60a5fa">
+              <animate attributeName="cy" 
+                       dur="2s" 
+                       values="300;290;300" 
+                       repeatCount="indefinite" />
+            </circle>
+            <circle cx="350" cy="300" r="20" fill="#60a5fa">
+              <animate attributeName="cy" 
+                       dur="2s" 
+                       values="300;290;300" 
+                       repeatCount="indefinite" />
+            </circle>
+            <path d="M200 250 L300 250" stroke="#ffffff" stroke-width="4">
+              <animate attributeName="d" 
+                       dur="3s" 
+                       values="M200 250 L300 250;M200 240 L300 240;M200 250 L300 250" 
+                       repeatCount="indefinite" />
+            </path>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="plans">
+      <h2>Elige el Plan Perfecto para Ti</h2>
+      <p class="section-description">
+        Nuestros planes se adaptan a estudiantes y docentes, ofreciendo diferentes niveles de acceso a simulacros, tutorías y estadísticas avanzadas.
+      </p>
+      <div class="plans-container">
+        <div class="plan-card student">
+          <div class="plan-header">
+            <i class="fas fa-user-graduate"></i>
+            <h3>Estudiante</h3>
+          </div>
+          <div class="price">S/. 49.90<span>/mes</span></div>
+          <ul class="plan-features">
+            <li><i class="fas fa-check"></i> Simulacros ilimitados</li>
+            <li><i class="fas fa-check"></i> Estadísticas personalizadas</li>
+            <li><i class="fas fa-check"></i> Tutorías en vivo</li>
+            <li><i class="fas fa-check"></i> Soporte 24/7</li>
+            <li><i class="fas fa-check"></i> Acceso a recursos premium</li>
+          </ul>
+          <button class="btn-plan">
+            Empezar Ahora
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+        <div class="plan-card teacher">
+          <div class="plan-header">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <h3>Profesor</h3>
+          </div>
+          <div class="price">S/. 89.90<span>/mes</span></div>
+          <ul class="plan-features">
+            <li><i class="fas fa-check"></i> Creación de simulacros</li>
+            <li><i class="fas fa-check"></i> Seguimiento de alumnos</li>
+            <li><i class="fas fa-check"></i> Reportes avanzados</li>
+            <li><i class="fas fa-check"></i> Panel administrativo</li>
+            <li><i class="fas fa-check"></i> Herramientas de análisis</li>
+          </ul>
+          <button class="btn-plan">
+            Comenzar a Enseñar
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+      <div class="plans-contact">
+        <a href="#contact">
+          ¿Tienes dudas? Contáctanos
+          <i class="fas fa-chevron-right"></i>
+        </a>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="stat-container">
+        <div class="stat" data-value="50000">
+          <i class="fas fa-user-graduate"></i>
+          <span class="stat-number">0</span>
+          <span class="stat-label">Estudiantes Activos</span>
+        </div>
+        <div class="stat" data-value="2000">
+          <i class="fas fa-chalkboard-teacher"></i>
+          <span class="stat-number">0</span>
+          <span class="stat-label">Profesores</span>
+        </div>
+        <div class="stat" data-value="1000000">
+          <i class="fas fa-tasks"></i>
+          <span class="stat-number">0</span>
+          <span class="stat-label">Simulacros Rendidos</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <h2>Características Principales</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <i class="fas fa-laptop"></i>
+          <h3>Simulacros Realistas</h3>
+          <p>Exámenes que replican el formato y nivel de dificultad real</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-chart-bar"></i>
+          <h3>Análisis Detallado</h3>
+          <p>Estadísticas y reportes para mejorar el rendimiento</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-users"></i>
+          <h3>Colaboración</h3>
+          <p>Interactúa con profesores y compañeros de estudio</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>Acceso Móvil</h3>
+          <p>Practica desde cualquier dispositivo, en cualquier momento</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <h2>Historias de Éxito</h2>
+      <div class="testimonials-slider">
+        <!-- Testimonials will be injected here via JavaScript -->
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <h2>Comienza tu Preparación Hoy</h2>
+      <p>Únete a miles de estudiantes y profesores que ya confían en SimuPro para alcanzar sus metas académicas</p>
+      <div class="cta-buttons">
+        <button class="btn-primary" aria-label="Iniciar prueba gratuita">
+          <i class="fas fa-rocket"></i>
+          Iniciar Prueba Gratuita
+        </button>
+        <button class="btn-secondary" aria-label="Explorar planes disponibles">
+          <i class="fas fa-chevron-right"></i>
+          Explorar Planes
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>SimuPro</h3>
+        <p>La mejor plataforma de preparación para exámenes de admisión en Perú</p>
+        <div class="footer-social">
+          <a href="#" class="social-icon" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Enlaces Rápidos</h3>
+        <ul>
+          <li><a href="#inicio"><i class="fas fa-chevron-right"></i>Inicio</a></li>
+          <li><a href="#simulacros"><i class="fas fa-chevron-right"></i>Simulacros</a></li>
+          <li><a href="#planes"><i class="fas fa-chevron-right"></i>Planes</a></li>
+          <li><a href="#blog"><i class="fas fa-chevron-right"></i>Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contacto</h3>
+        <p><i class="fas fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ef86818980af9c86829a9f9d80c19f8a">[email&#160;protected]</a></p>
+        <p><i class="fas fa-phone"></i> (01) 123-4567</p>
+        <p><i class="fas fa-map-marker-alt"></i> Lima, Perú</p>
+      </div>
+      <div class="footer-section">
+        <h3>Soporte</h3>
+        <ul>
+          <li><a href="#ayuda"><i class="fas fa-question-circle"></i>Centro de Ayuda</a></li>
+          <li><a href="#faq"><i class="fas fa-info-circle"></i>Preguntas Frecuentes</a></li>
+          <li><a href="#terminos"><i class="fas fa-file-alt"></i>Términos y Condiciones</a></li>
+          <li><a href="#privacidad"><i class="fas fa-shield-alt"></i>Política de Privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 SimuPro. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Modals -->
+  <div id="loginModal" class="modal"></div>
+  <div id="registerModal" class="modal"></div>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="module" src="js/main.js"></script>
+</body>
+</html>

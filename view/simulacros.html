@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SimuPro - Simulacros de Examen</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/simulacros.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav-container">
+      <a href="/" class="logo">
+        <h1>SimuPro</h1>
+      </a>
+      <div class="nav-links">
+        <a href="#inicio">
+          <i class="fas fa-home"></i>
+          <span>Inicio</span>
+        </a>
+        <a href="#simulacros" class="active">
+          <i class="fas fa-book"></i>
+          <span>Simulacros</span>
+        </a>
+        <a href="#estadisticas">
+          <i class="fas fa-chart-line"></i>
+          <span>Estadísticas</span>
+        </a>
+        <a href="#perfil">
+          <i class="fas fa-user"></i>
+          <span>Perfil</span>
+        </a>
+      </div>
+      <div class="auth-buttons">
+        <button class="btn-login">
+          <i class="fas fa-sign-in-alt"></i>
+          <span>Ingresar</span>
+        </button>
+        <button class="btn-register">
+          <i class="fas fa-user-plus"></i>
+          <span>Registro</span>
+        </button>
+      </div>
+      <button class="menu-toggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main class="simulacros-page">
+    <section class="hero-mini">
+      <div class="hero-content">
+        <h1>
+          <i class="fas fa-pencil-alt"></i>
+          Simulacros
+        </h1>
+        <p class="hero-description">
+          Practica con exámenes reales, pon a prueba tus conocimientos y prepárate para tu futuro universitario.
+        </p>
+      </div>
+    </section>
+
+    <section class="simulacros-container">
+      <aside class="filters-panel">
+        <div class="search-box">
+          <input type="text" id="searchSimulacros" placeholder="Buscar simulacros...">
+          <i class="fas fa-search"></i>
+        </div>
+
+        <div class="filter-group">
+          <h3>Área de Estudio</h3>
+          <div class="filter-options">
+            <label class="filter-option">
+              <input type="checkbox" value="matematica">
+              <span class="checkbox-custom"></span>
+              <i class="fas fa-square-root-alt"></i>
+              Matemática
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="ciencias">
+              <span class="checkbox-custom"></span>
+              <i class="fas fa-flask"></i>
+              Ciencias
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="humanidades">
+              <span class="checkbox-custom"></span>
+              <i class="fas fa-book"></i>
+              Humanidades
+            </label>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h3>Dificultad</h3>
+          <div class="filter-options">
+            <label class="filter-option">
+              <input type="radio" name="difficulty" value="basico">
+              <span class="radio-custom"></span>
+              <i class="fas fa-star"></i>
+              Básico
+            </label>
+            <label class="filter-option">
+              <input type="radio" name="difficulty" value="intermedio">
+              <span class="radio-custom"></span>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              Intermedio
+            </label>
+            <label class="filter-option">
+              <input type="radio" name="difficulty" value="avanzado">
+              <span class="radio-custom"></span>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              Avanzado
+            </label>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h3>Universidad</h3>
+          <div class="filter-options">
+            <label class="filter-option">
+              <input type="checkbox" value="uni">
+              <span class="checkbox-custom"></span>
+              UNI
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="unmsm">
+              <span class="checkbox-custom"></span>
+              UNMSM
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="pucp">
+              <span class="checkbox-custom"></span>
+              PUCP
+            </label>
+          </div>
+        </div>
+      </aside>
+
+      <div class="simulacros-grid">
+        <!-- Simulacros will be injected here via JavaScript -->
+      </div>
+    </section>
+  </main>
+
+  <div id="examModal" class="modal">
+    <div class="modal-content">
+      <!-- Content will be injected via JavaScript -->
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>SimuPro</h3>
+        <p>La mejor plataforma de preparación para exámenes de admisión en Perú</p>
+        <div class="footer-social">
+          <a href="#" class="social-icon" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Enlaces Rápidos</h3>
+        <ul>
+          <li><a href="#inicio"><i class="fas fa-chevron-right"></i>Inicio</a></li>
+          <li><a href="#simulacros"><i class="fas fa-chevron-right"></i>Simulacros</a></li>
+          <li><a href="#planes"><i class="fas fa-chevron-right"></i>Planes</a></li>
+          <li><a href="#blog"><i class="fas fa-chevron-right"></i>Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contacto</h3>
+        <p><i class="fas fa-envelope"></i> info@simupro.pe</p>
+        <p><i class="fas fa-phone"></i> (01) 123-4567</p>
+        <p><i class="fas fa-map-marker-alt"></i> Lima, Perú</p>
+      </div>
+      <div class="footer-section">
+        <h3>Soporte</h3>
+        <ul>
+          <li><a href="#ayuda"><i class="fas fa-question-circle"></i>Centro de Ayuda</a></li>
+          <li><a href="#faq"><i class="fas fa-info-circle"></i>Preguntas Frecuentes</a></li>
+          <li><a href="#terminos"><i class="fas fa-file-alt"></i>Términos y Condiciones</a></li>
+          <li><a href="#privacidad"><i class="fas fa-shield-alt"></i>Política de Privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 SimuPro. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/simulacros-page.js"></script>
+</body>
+</html>
